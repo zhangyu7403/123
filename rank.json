@@ -1,5 +1,4 @@
-{
-    "ranks": [
+[
         {
             "file": "rank_1.json",
             "title": "流行音乐",
@@ -116,7 +115,5 @@
             "search_query": false
         }
         
-    ],
-    "modified": "2019-3-18 02:30:51 UTC"
-}
+    ]
 
