@@ -58,61 +58,6 @@
             "title": "ラテンアメリカ音楽",
             "search_words": "PLcfQmtiAG0X_3a1RP-bcjWImDwdYaOW4b",
             "search_query": false
-        },
-        {
-            "file": "rank_11.json",
-            "title": "ジャズ",
-            "search_words": "PLMcThd22goGYit-NKu2O8b4YMtwSTK9b9",
-            "search_query": false
-        },
-        {
-            "file": "rank_12.json",
-            "title": "EDM",
-            "search_words": "PLUg_BxrbJNY5gHrKsCsyon6vgJhxs72AH",
-            "search_query": false
-        },
-        {
-            "file": "rank_13.json",
-            "title": "クラシック",
-            "search_words": "PLVXq77mXV53-Np39jM456si2PeTrEm9Mj",
-            "search_query": false
-        },
-        {
-            "file": "rank_14.json",
-            "title": "ソウル ミュージック",
-            "search_words": "PLQog_FHUHAFW0mG_Jy4hIIZGx-tc7SwLq",
-            "search_query": false
-        },
-        {
-            "file": "rank_15.json",
-            "title": "ポップロック",
-            "search_words": "PLr8RdoI29cXIlkmTAQDgOuwBhDh3yJDBQ",
-            "search_query": false
-        },
-        {
-            "file": "rank_16.json",
-            "title": "J ポップ ",
-            "search_words": "PLkXJ6qy8CwfiHRL6_skvLuDbajF6KAgcu",
-            "search_query": false
-        },
-        {
-            "file": "rank_17.json",
-            "title": "Rhythm & Blues",
-            "search_words": "PLWNXn_iQ2yrINTxUxfcqnKv6Ios5XByKj",
-            "search_query": false
-        },
-        {
-            "file": "rank_18.json",
-            "title": "VOCALOID",
-            "search_words": "PL6ahIEq1lB3Clyq8gHcByLm4YmycrU6wb",
-            "search_query": false
-        }
-        ,
-        {
-            "file": "rank_19.json",
-            "title": "アジア音楽",
-            "search_words": "PL0zQrw6ZA60ZgzlsoU49Z6EFJcgnd-RBr",
-            "search_query": false
         }
         
     ]
