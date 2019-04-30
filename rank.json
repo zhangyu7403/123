@@ -1,49 +1,49 @@
 [
         {
             "file": "rank_1.json",
-            "title": "流行音乐",
+            "title": "ポップス",
             "search_words": "PLDcnymzs18LWLKtkNrKYzPpHLbnXRu4nN",
             "search_query": false
         },
         {
             "file": "rank_2.json",
-            "title": "hip-hop",
+            "title": "ヒップホップ",
             "search_words": "PLH6pfBXQXHEANvXkdNlaofmN-2dOpGTHZ",
             "search_query": false
         },
         {
             "file": "rank_3.json",
-            "title": "另类摇滚",
+            "title": "オルタナティブ·ロック",
             "search_words": "PL47oRh0-pTouthHPv6AbALWPvPJHlKiF7",
             "search_query": false
         },
         {
             "file": "rank_4.json",
-            "title": "重金属",
+            "title": "ヘビーメタル",
             "search_words": "PLfY-m4YMsF-NiDvD_lA8-2VjEqDT9pbuO",
             "search_query": false
         },
         {
             "file": "rank_5.json",
-            "title": "摇滚",
+            "title": "ロック",
             "search_words": "PLhd1HyMTk3f7KwWMyGRfyTE12IahrHk52",
             "search_query": false
         },
         {
             "file": "rank_6.json",
-            "title": "韩国摇滚",
+            "title": "K ポップ",
             "search_words": "PLTDluH66q5mpm-Bsq3GlwjMOHITt2bwXE",
             "search_query": false
         },
         {
             "file": "rank_7.json",
-            "title": "电音",
+            "title": "電子音楽",
             "search_words": "PLFPg_IUxqnZPgEG8WeJn20MMuYHT5RIaB",
             "search_query": false
         },
         {
             "file": "rank_8.json",
-            "title": "雷吉",
+            "title": "レゲエ",
             "search_words": "PLYAYp5OI4lRIeUUrKnP7v9yjLtSMv4iRc",
             "search_query": false
         },
