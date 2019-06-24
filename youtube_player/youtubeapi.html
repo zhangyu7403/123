@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>youtube</title>
+	</head>
+	<body>
+		<div id="player"></div>
+		<script>
+			var tag = document.createElement('script');
+
+		    tag.src = "https://www.youtube.com/iframe_api";
+		    var firstScriptTag = document.getElementsByTagName('script')[0];
+		    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		    
+		    var player;
+	        function onYouTubeIframeAPIReady() {
+	            player = new YT.Player("player", {
+					width: '320',
+                    height: '240',
+	            	videoId: '1s84rIhPuhk',
+					autoplay: 1,
+					playerVars: {
+					            'controls': 0,
+					            'autoplay': 1,
+						        'enablejsapi': 1,
+						        'fs': 0,
+					            // 'origin': 'https://sarbagyadhaubanjar.github.io',
+						        'rel': 0,
+						        'showinfo': 0,
+						        'iv_load_policy': 3,
+						        'modestbranding': 1,
+						        'cc_load_policy': 0,
+					          },
+		             events: {
+		             	"onReady": onPlayerReady,
+		                "onStateChange": onPlayerStateChange
+		            }
+		        });
+	        }
+	        
+	        function onPlayerReady() {
+				player.playVideo();
+	        }
+	        
+	        function onPlayerStateChange(event){
+	        	console.log(event.data);
+	        }
+			function loadById(id, startAt) {
+			    player.loadVideoById(id, startAt);
+			    return '';
+			}
+			
+			function play() {
+				player.playVideo();
+			}
+			
+			function pause() {
+				player.pauseVideo();
+			}
+		</script>
+	</body>
+</html>
+
