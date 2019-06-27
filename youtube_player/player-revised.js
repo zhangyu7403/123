@@ -47,7 +47,7 @@ function sendPlayerStateChange(playerState) {
     console.log("playerState"+playerState);
 //    window.print("打印"+playerState);
     if (playerState == 1) {
-//        startSendCurrentTimeInterval();
+        startSendCurrentTimeInterval();
 //        sendVideoData(player);
     }else if (playerState == YT.PlayerState.ENDED) {
          //实现循环播放
@@ -79,9 +79,10 @@ function setNextSong(id) {
 
 function startSendCurrentTimeInterval() {
     timerId = setInterval(function () {
-        CurrentTime.postMessage(player.getCurrentTime());
-        LoadedFraction.postMessage(player.getVideoLoadedFraction());
-    }, 100);
+        // CurrentTime.postMessage(player.getCurrentTime());
+        // LoadedFraction.postMessage(player.getVideoLoadedFraction());
+		window.android.jsCurrentPosition(player.getCurrentTime());
+    }, 1000);
 }
 
 function play() {
