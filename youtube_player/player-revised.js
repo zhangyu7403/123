@@ -103,8 +103,8 @@ function cueById(id, startAt) {
     return '';
 }
 function getCurrentPosition(){
-    //返回当前播放时间
-    return player.getCurrentTime();
+    //返回当前播放位置
+    return player.getCurrentPosition();
 }
 
 function mute() {
