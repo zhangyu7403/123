@@ -104,7 +104,8 @@ function cueById(id, startAt) {
 }
 function getCurrentPosition(){
     //返回当前播放位置
-    return player.getCurrentPosition();
+    return player.getCurrentTime();
+;
 }
 
 function mute() {
