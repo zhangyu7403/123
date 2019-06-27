@@ -52,9 +52,9 @@ function sendPlayerStateChange(playerState) {
     }else if (playerState == YT.PlayerState.ENDED) {
          //实现循环播放
          player.stopVideo();
-		 window.android.jsCallAndroidArgs('stop');
+		 // window.android.jsCallAndroidArgs('stop');
 //         player.playVideo();
-         // loadById(nextSong, 0);
+          loadById(nextSong, 0);
 
     }else if(playerState == 5){
          player.playVideo();
@@ -74,7 +74,7 @@ function sendVideoData(player) {
 }
 function setNextSong(id) {
     nextSong = id;
-    return '';
+    return nextSong;
 }
 
 function startSendCurrentTimeInterval() {
