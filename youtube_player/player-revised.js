@@ -1,24 +1,27 @@
 var player;
 var timerId;
+var nextSong;
 function onYouTubeIframeAPIReady(){
     player = new YT.Player('player', {
         height: '100%',
         width: '100%',
-	    host: 'https://www.youtube.com',
+//		videoId:'1s84rIhPuhk',
+	    // host: 'https://www.youtube.com',
         playerVars: {
             'controls': 0,
-            'autoplay': 0,
+            'autoplay': 1,
+            'loop':1,
 	        'enablejsapi': 1,
 	        'fs': 0,
-            'origin': 'https://sarbagyadhaubanjar.github.io',
-	        'rel': 0,
+            // 'origin': 'https://sarbagyadhaubanjar.github.io',
+	        'rel': false,
 	        'showinfo': 0,
 	        'iv_load_policy': 3,
 	        'modestbranding': 1,
 	        'cc_load_policy': 0,
           },
         events: {
-            onReady: function (event) { Ready.postMessage("Ready") },
+            onReady: onPlayerReady,
             onStateChange: function (event) { sendPlayerStateChange(event.data) },
             onPlaybackQualityChange: function (event) { PlaybackQualityChange.postMessage(event.data) },
             onPlaybackRateChange: function (event) { PlaybackRateChange.postMessage(event.data) },
@@ -26,6 +29,10 @@ function onYouTubeIframeAPIReady(){
         },
     });
 }
+ function onPlayerReady(event) {
+        event.target.playVideo();
+//        window.android.jsCallAndroidArgs('Ready');
+ }
 
 function hideAnnotations() {
     document.body.style.height = '1000%';
@@ -36,11 +43,23 @@ function hideAnnotations() {
 
 function sendPlayerStateChange(playerState) {
     clearTimeout(timerId);
-    StateChange.postMessage(playerState);
+//    StateChange.postMessage(playerState);
+    console.log("playerState"+playerState);
+//    window.print("打印"+playerState);
     if (playerState == 1) {
-        startSendCurrentTimeInterval();
-        sendVideoData(player);
+//        startSendCurrentTimeInterval();
+//        sendVideoData(player);
+    }else if (playerState == YT.PlayerState.ENDED) {
+         //实现循环播放
+         player.stopVideo();
+//         player.playVideo();
+         loadById(nextSong, 0);
+
+    }else if(playerState == 5){
+         player.playVideo();
     }
+
+
 }
 
 function sendVideoData(player) {
@@ -51,6 +70,10 @@ function sendVideoData(player) {
         'videoEmbedCode': player.getVideoEmbedCode(),
     };
     VideoData.postMessage(JSON.stringify(videoData));
+}
+function setNextSong(id) {
+    nextSong = id;
+    return '';
 }
 
 function startSendCurrentTimeInterval() {
@@ -78,6 +101,10 @@ function loadById(id, startAt) {
 function cueById(id, startAt) {
     player.cueVideoById(id, startAt);
     return '';
+}
+function getCurrentPosition(){
+    //返回当前播放时间
+    return player.getCurrentTime();
 }
 
 function mute() {
