@@ -23,9 +23,9 @@ function onYouTubeIframeAPIReady(){
         events: {
             onReady: onPlayerReady,
             onStateChange: function (event) { sendPlayerStateChange(event.data) },
-            // onPlaybackQualityChange: function (event) { PlaybackQualityChange.postMessage(event.data) },
- //            onPlaybackRateChange: function (event) { PlaybackRateChange.postMessage(event.data) },
- //            onError: function (error) { Errors.postMessage(error.data) }
+            onPlaybackQualityChange: function (event) { PlaybackQualityChange.postMessage(event.data) },
+            onPlaybackRateChange: function (event) { PlaybackRateChange.postMessage(event.data) },
+            onError: function (error) { Errors.postMessage(error.data) }
         },
     });
 }
