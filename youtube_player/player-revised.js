@@ -35,7 +35,8 @@ function onYouTubeIframeAPIReady(){
  }
  
  function onPlayerError(error) {
-        window.android.jsCallError(error.data);
+	 console.log("error:"+error.data);
+     window.android.jsCallError(error.data);
  }
 
 function hideAnnotations() {
