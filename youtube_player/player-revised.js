@@ -25,13 +25,17 @@ function onYouTubeIframeAPIReady(){
             onStateChange: function (event) { sendPlayerStateChange(event.data) },
             onPlaybackQualityChange: function (event) { PlaybackQualityChange.postMessage(event.data) },
             onPlaybackRateChange: function (event) { PlaybackRateChange.postMessage(event.data) },
-            onError: function (error) { Errors.postMessage(error.data) }
+            onError: onPlayerError
         },
     });
 }
  function onPlayerReady(event) {
         event.target.playVideo();
 //        window.android.jsCallAndroidArgs('Ready');
+ }
+ 
+ function onPlayerError(error) {
+        window.android.jsCallError(error.data);
  }
 
 function hideAnnotations() {
