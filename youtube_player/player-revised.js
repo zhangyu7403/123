@@ -58,9 +58,11 @@ function sendPlayerStateChange(playerState) {
          //实现循环播放
          player.stopVideo();
          loadById(nextSong, 0);
-		 player.playVideo();
+		 // player.playVideo();
 		 window.android.jsCallAndroidArgs('stop');
 
+    }else if(playerState == 3){
+         player.playVideo();
     }else if(playerState == 5){
          player.playVideo();
     }
