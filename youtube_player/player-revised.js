@@ -1,6 +1,7 @@
 var player;
 var timerId;
 var nextSong;
+var kpk;
 function onYouTubeIframeAPIReady(){
     player = new YT.Player('player', {
         height: '100%',
@@ -52,19 +53,29 @@ function sendPlayerStateChange(playerState) {
     console.log("playerState"+playerState);
 //    window.print("打印"+playerState);
     if (playerState == 1) {
+		kpk = false;
         startSendCurrentTimeInterval();
 //        sendVideoData(player);
     }else if (playerState == YT.PlayerState.ENDED) {
          //实现循环播放
          player.stopVideo();
+		 kpk = true;
          loadById(nextSong, 0);
 		 // player.playVideo();
 		 window.android.jsCallAndroidArgs('stop');
 
+    }else if(playerState == 2){
+		if(kpk){
+			player.playVideo();
+		}    
     }else if(playerState == 3){
-         player.playVideo();
+		if(kpk){
+			player.playVideo();
+		}  
     }else if(playerState == 5){
-         player.playVideo();
+		if(kpk){
+			player.playVideo();
+		}  
     }
 
 
