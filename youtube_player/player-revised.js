@@ -61,8 +61,6 @@ function sendPlayerStateChange(playerState) {
 		 // player.playVideo();
 		 window.android.jsCallAndroidArgs('stop');
 
-    }else if(playerState == 2){
-         player.playVideo();
     }else if(playerState == 3){
          player.playVideo();
     }else if(playerState == 5){
