@@ -54,6 +54,7 @@ function sendPlayerStateChange(playerState) {
 //    window.print("打印"+playerState);
     if (playerState == 1) {
 		kpk = false;
+		window.android.jsCallAndroidArgs('play');
         startSendCurrentTimeInterval();
 //        sendVideoData(player);
     }else if (playerState == YT.PlayerState.ENDED) {
