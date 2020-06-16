@@ -130,7 +130,7 @@ function getCurrentPosition(){
 function getDuration(){
     //返回视屏总时长
     return player.getDuration();
-;
+}
 
 function mute() {
     player.mute();
