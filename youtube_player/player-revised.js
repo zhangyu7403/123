@@ -126,8 +126,11 @@ function cueById(id, startAt) {
 function getCurrentPosition(){
     //返回当前播放位置
     return player.getCurrentTime();
-;
 }
+function getDuration(){
+    //返回视屏总时长
+    return player.getDuration();
+;
 
 function mute() {
     player.mute();
