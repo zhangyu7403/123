@@ -59,9 +59,9 @@ function sendPlayerStateChange(playerState) {
 //        sendVideoData(player);
     }else if (playerState == YT.PlayerState.ENDED) {
          //实现循环播放
-         player.stopVideo();
-		 kpk = true;
-         loadById(nextSong, 0);
+        //  player.stopVideo();
+		//  kpk = true;
+        //  loadById(nextSong, 0);
 		 // player.playVideo();
 		 window.android.jsCallAndroidArgs('stop');
 
