@@ -66,9 +66,10 @@ function sendPlayerStateChange(playerState) {
 		 window.android.jsCallAndroidArgs('stop');
 
     }else if(playerState == 2){
-		if(kpk){
-			player.playVideo();
-		}    
+        // 不处理
+		// if(kpk){
+		// 	player.playVideo();
+		// }    
     }else if(playerState == 3){
 		if(kpk){
 			player.playVideo();
