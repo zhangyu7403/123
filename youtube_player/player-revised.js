@@ -71,13 +71,13 @@ function sendPlayerStateChange(playerState) {
 		// 	player.playVideo();
 		// }    
     }else if(playerState == 3){
-		if(kpk){
-			player.playVideo();
-		}  
+		// if(kpk){
+		// 	player.playVideo();
+		// }  
     }else if(playerState == 5){
-		if(kpk){
-			player.playVideo();
-		}  
+		// if(kpk){
+		// 	player.playVideo();
+		// }  
     }
 
 
