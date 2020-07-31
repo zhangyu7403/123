@@ -31,8 +31,8 @@ function onYouTubeIframeAPIReady(){
     });
 }
  function onPlayerReady(event) {
-        event.target.playVideo();
-//        window.android.jsCallAndroidArgs('Ready');
+        // event.target.playVideo();
+       window.android.jsCallAndroidArgs('Ready');
  }
  
  function onPlayerError(error) {
